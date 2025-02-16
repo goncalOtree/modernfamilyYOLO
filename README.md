@@ -59,9 +59,6 @@ test.real_time_prediction("video.mp4")
 - `playground.ipynb` - A Jupyter Notebook demonstrating example usage.
 - `not_used_on_training/` - A directory containing test images that were not part of the training dataset.
 
-### Train and export
-If you have a custom dataset, you can train the model using `train.py` and then exporting it to ONNX format with `export.py`. Adjust the `config.yaml` file accordingly.
-
 ## Based On
 This project was inspired by the following tutorials:
 - [YOLO Object Detection Using OpenCV And Python](https://www.youtube.com/watch?v=mRhQmRm_egc)
