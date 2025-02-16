@@ -17,10 +17,6 @@ This repository contains a Python implementation of YOLO object detection using 
    git clone https://github.com/goncalOtree/modernfamilyYOLO.git
    cd modernfamilyYOLO
    ```
-2. Install dependencies:
-   ```sh
-   pip install -r requirements.txt
-   ```
 
 ## Dependencies
 - OpenCV
