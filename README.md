@@ -14,7 +14,7 @@ This repository contains a Python implementation of YOLO object detection using 
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-username/modernfamilyYOLO.git
+   git clone https://github.com/goncalOtree/modernfamilyYOLO.git
    cd modernfamilyYOLO
    ```
 2. Install dependencies:
