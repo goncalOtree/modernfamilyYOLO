@@ -28,12 +28,16 @@ This repository contains a Python implementation of YOLO object detection using 
 - PyYAML
 - Ultralytics [optional] (for YOLOv8 training and exporting)
 
+## Model Files
+- `model.onnx` - The trained YOLO model in ONNX format.
+- `config.yaml` - Configuration file containing class names and other settings.
+
 ## Running Object Detection on an Image
 ```python
 from yolo_predictions import YOLO_pred
 import cv2
 
-test = YOLO_pred('runs/detect/train/weights/model.onnx', 'config.yaml')
+test = YOLO_pred(model.onnx', 'config.yaml')
 result = test.predictions("image.jpg")
 cv2.imshow("prediction", result)
 cv2.waitKey(0)
@@ -45,6 +49,23 @@ cv2.destroyAllWindows()
 test.real_time_prediction("video.mp4")
 ```
 
+## Training and Exporting the Model
+- **Training:** The model was trained using `train.py` with a YOLOv8 model.
+- **Exporting:** The trained model was exported to ONNX format using `export.py`.
+
+## How It Works
+- **Model Inference:** Uses OpenCV’s DNN module to run inference with `model.onnx`.
+- **Image Preprocessing:** Resizes and normalizes input images.
+- **Post-processing:** Filters predictions using Non-Maximum Suppression (NMS).
+- **Visualization:** Draws bounding boxes and class labels on the image.
+
+## Additional Files
+- `playground.ipynb` - A Jupyter Notebook demonstrating example usage.
+- `not_used_on_training/` - A directory containing test images that were not part of the training dataset.
+
+### Train and export
+If you have a custom dataset, you can train the model using `train.py` and then exporting it to ONNX format with `export.py`. Adjust the `config.yaml` file accordingly.
+
 ## Based On
 This project was inspired by the following tutorials:
 - [YOLO Object Detection Using OpenCV And Python](https://www.youtube.com/watch?v=mRhQmRm_egc)
@@ -52,6 +73,7 @@ This project was inspired by the following tutorials:
 
 ## Author
 [Gonçalo Oliveira](https://github.com/goncalOtree)
+
 
 
 
