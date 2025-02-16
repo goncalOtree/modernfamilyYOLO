@@ -33,7 +33,7 @@ This repository contains a Python implementation of YOLO object detection using 
 from yolo_predictions import YOLO_pred
 import cv2
 
-test = YOLO_pred(model.onnx', 'config.yaml')
+test = YOLO_pred('model.onnx', 'config.yaml')
 result = test.predictions("image.jpg")
 cv2.imshow("prediction", result)
 cv2.waitKey(0)
